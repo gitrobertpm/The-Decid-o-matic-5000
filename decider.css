@@ -57,10 +57,6 @@ body {
 	box-shadow: 2px 2px 3px rgba(0,0,0,.5) inset, -2px 2px 3px rgba(0,0,0,.5) inset;
 }
 
-#buttonDiv {
-	position: relative;
-}
-
 button  {
 	font-size: 1em;
 	color: black;
@@ -123,11 +119,12 @@ button:disabled {
 
 #question {
 	position: relative;
+	overflow: hidden;
 	text-align: center;
 	font-family: "Courier New", Courier, monospace;
 	font-size: .9em;
 	letter-spacing: 1px;
-	min-height: 150px;
+	height: 150px;
 	width: 95%;
 	color: deepskyblue;
 	margin: 2px auto;
@@ -201,27 +198,31 @@ button:disabled {
 }
 
 /* STYLING FOR WORDS AT THE ENDS OF THE MEASURING DEVICE */
+#buttonDiv {
+	position: relative;
+}
+
 #doIt,
 #dontDoIt {
 	position: absolute;
-	font-size: 1em;
 	text-align: center;
-	padding-right: 5px;
-	padding-left: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 #doIt {
-	top: -10px;
+	top: -65px;
 	left: 0px;
 }
 
 #dontDoIt {
-	top: -10px;
+	top: -65px;
 	right: 0px;
 }
 
 #doIt p,
 #dontDoIt p {
+	font-size: .9em;
 	margin: 0;
 }
 
@@ -253,7 +254,7 @@ footer {
 	}
 	
 	#doIt {
-	left: 10px;
+		left: 10px;
 	}
 
 	#dontDoIt {
@@ -270,8 +271,12 @@ footer {
 		background: linear-gradient(65deg, red, white, red, red, red, white, red, red, red, white);
 	}
 	
+	#question {
+		height: 100px;
+	}
+	
 	#nightRider {
-	-webkit-animation-duration: 3s;
+		-webkit-animation-duration: 3s;
 		animation-duration: 3s;
 	}
 
@@ -288,17 +293,16 @@ footer {
 	#doIt {
 		top: -5px;
 		left: 25px;
-		font-size: 1.25em;
 	}
 
 	#dontDoIt {
 		right: 25px;
 		top: -5px;
-		font-size: 1.25em;
 	}
 	
-	#question {
-		min-height: 150px;
+	#doIt p,
+	#dontDoIt p {
+		font-size: 1.25em;
 	}
 }
 
@@ -353,11 +357,14 @@ footer {
 	
 	#doIt {
 		left: 5%;
-		font-size: 1.5em;
 	}
 
 	#dontDoIt {
 		right: 5%;
+	}
+	
+	#doIt p,
+	#dontDoIt p {
 		font-size: 1.5em;
 	}
 	
