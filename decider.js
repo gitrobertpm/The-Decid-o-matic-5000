@@ -32,7 +32,7 @@ opener();
 // INSTRUCTIONS
 var howToProceed = function() {
 	questionPrint("<p>Click the <b>\"Continue\"</b> button below to see the first of five questions that are designed to reveal if a thing should be done, or better left undone.</p>");
-	commentPrint("<h3>Instructions</h3><ul id=\"instructionList\"><li>1. Think of something you are considering doing.</li><li>2. Now, try to clear your mind of all your opinions.</li><li>3. Try to be completely objective in your thinking.</li><li>4. And when answering the questions below, try to be brutally honest.</li></ul><p id=\"goodLuck\">&#9786; Good Luck! &#9786;</p>");
+	commentPrint("<h3>Instructions</h3><p>Is there something you you've been wanting to do?  Is there something you think you should or shouldn't do, but you're just not sure?  Is there something people have been telling you to do or don't do, and you don't know if you should listen to them?  Maybe I can help.</p><ul id=\"instructionList\"><li>1. Open your mind and clear it of all opinions.</li><li>2. Let go of all you think you know.</li><li>3. Carefully consider what you want to ask.</li><li>4. And when answering the questions below, try to be brutally honest.</li></ul><p id=\"goodLuck\">&#9786; Good Luck! &#9786;</p>");
 };
 
 // SET BUTTON STATES
@@ -74,6 +74,9 @@ function begin() {
 	continueButtonOff(false);
 	beginButtonOff(true);
 	howToProceed();
+	document.getElementById("comment").style.height = "auto";
+	document.getElementById("continueButton").style.display = "block";
+	document.getElementById("beginButton").style.display = "none";
 };
 
 // SET POSITION OF RED LINE ON SCALE
@@ -119,13 +122,13 @@ function affirmative() {
 	redSlider();
 	// COMMENT AND PROMPT
 	if (score > 0  && score < 6) {
-		commentPrint("<p>It's looking good.<br><br><br>Click <b>\"Continue\"</b></p>");
+		commentPrint("<p>It's looking good.<br>Click <b>\"Continue\"</b></p>");
 	} else if ( score > 5) {
-		commentPrint("<p>This one's looking really good.<br><br><br>Click <b>\"Continue\"</b></p>");
+		commentPrint("<p>This one's looking really good.<br>Click <b>\"Continue\"</b></p>");
 	} else if (score < 1 && score > -3) {
-		commentPrint("<p>This one might be making a turn for the better.<br><br><br>Click <b>\"Continue\"</b></p>");
+		commentPrint("<p>This one might be making a turn for the better.<br>Click <b>\"Continue\"</b></p>");
 	} else if (score < -2) {
-		commentPrint("<p>This one might be a lost cause.<br><br><br>Click <b>\"Continue\"</b></p>");
+		commentPrint("<p>This one might be a lost cause.<br>Click <b>\"Continue\"</b></p>");
 	}
 };
 
@@ -155,7 +158,7 @@ function neither() {
 	affirmativeButtonOff(true);
 	negativeButtonOff(true);
 	neitherButtonOff(true);
-	commentPrint("<p>No effect isn't necessarily a bad thing, but it could be.<br><br><br>Click <b>\"Continue\"</b></p>");
+	commentPrint("<p>No effect isn't necessarily a bad thing, but it could be.<br>Click <b>\"Continue\"</b></p>");
 }
 
 // NEXT QUESTION BUTTON
@@ -166,7 +169,7 @@ function continueBtn() {
 	continueButtonOff(true);
 	counter += 1;
 	var questionsAnswered = counter - 1;
-	commentPrint("<p><br>Current score = " + score + "<br><br>Questions answered = " + questionsAnswered + " of 5</p>");
+	commentPrint("<p>Current score = " + score + "<br>Questions answered = " + questionsAnswered + " of 5</p>");
 	// DISPLAY QUESTIONS
 	if (counter === 1) {
 		questionPrint(question1);
@@ -195,9 +198,11 @@ function continueBtn() {
 		affirmativeButtonOff(true);
 		negativeButtonOff(true);
 		neitherButtonOff(true);
-		commentPrint("<p><b>All done</b>.<br><br>You scored a " + score + ", which " + scoreMessage + " on the scale of good ideas.</p>");
+		commentPrint("<p><b>All done</b>.<br>You scored a " + score + ", which " + scoreMessage + " on the scale of good ideas.</p>");
 		questionPrint("<p>If you have another question, let's go again.</p><br><button type=button\" onclick=\"reset()\"> Reset </button>");
 	}
+	
+	document.getElementById("comment").style.height = "default";
 };
 
 // RESET BUTTON
@@ -209,4 +214,5 @@ function reset() {
 	score = 0;
 	counter = 0;
 	scoreMessage = "";
+	document.getElementById("beginButton").style.display = "block";
 };

@@ -4,7 +4,7 @@ body {
 	font-family: Century Gothic, sans-serif;
 	font-size: 1em;
 	margin: 0;
-	background: deepskyblue;
+	background: rgb(25,25,25);
 }
 
 /* DECIDOMATIC OUTER SHELL */
@@ -17,7 +17,7 @@ body {
 	margin: 25px auto 50px;
 	padding-top: 15px;
 	padding-right: 5px;
-	padding-bottom: 25px;
+	padding-bottom: 5px;
 	padding-left: 5px;
 	border-radius: 55px 55px 0 0;
 	box-shadow: 5px 0 5px rgba(0,0,0,.5) inset, -5px 0 5px rgba(0,0,0,.5) inset, 10px 5px 10px rgba(0,0,0,.5), -10px 5px 10px rgba(0,0,0,.5);
@@ -27,9 +27,9 @@ body {
 	text-align: center;
 	width: 90%;
 	max-width: 850px;
-	margin: 0px auto 15px;
+	margin: 0px auto 5px;
 	padding: 5px;
-	background: linear-gradient(75deg, red, white, red, red, red, white, red);
+	background: -webkit-linear-gradient(15deg, red, white, red, red, red, white, red);background: linear-gradient(75deg, red, white, red, red, red, white, red);
 	border-bottom: 1px solid white;
 	border-radius: 45px 45px 0 0;
 	box-shadow: 2px 2px 3px rgba(0,0,0,.5) inset, -2px 2px 3px rgba(0,0,0,.5) inset;
@@ -42,17 +42,21 @@ body {
 	text-shadow: 2px 2px 1px black;
 }
 
+#titleDiv p {
+	margin: -5px auto 5px;
+}
+
 /* DEVICOMATIC CONSOLE */
 #device {
 	text-align: center;
 	width: 90%;
 	max-width: 850px;
-	margin: 5px auto 15px;
-	padding-top: 15px;
-	padding-bottom: 25px;
+	margin: 5px auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
-	background: linear-gradient(75deg, red, white, red, red, red, white, red, red, white);
+	background: -webkit-linear-gradient(15deg, red, white, red, red, red, white, red, red, white);background: linear-gradient(75deg, red, white, red, red, red, white, red, red, white);
 	border-bottom: 1px solid white;
 	box-shadow: 2px 2px 3px rgba(0,0,0,.5) inset, -2px 2px 3px rgba(0,0,0,.5) inset;
 }
@@ -69,7 +73,7 @@ button  {
 button:enabled {
 	font-weight: bold;
 	background: ivory;
-	background: radial-gradient(circle, white, dodgerblue, deepskyblue);
+	background: -webkit-radial-gradient(circle, white, dodgerblue, deepskyblue);background: radial-gradient(circle, white, dodgerblue, deepskyblue);
 	box-shadow: 1px 1px 5px rgba(0, 0, 255, 0.3), 1px -1px 5px rgba(0, 0, 255, 0.3), -1px 1px 5px rgba(0, 0, 255, 0.3), -1px -1px 5px rgba(0, 0, 255, 0.3);
 }
 
@@ -77,20 +81,29 @@ button:disabled {
 	background: rgba(0,0,0,0.5);
 }
 
+#continueButton {
+	display: none;
+	margin: auto;
+}
+
 /* COMMENT SECTION */
 #comment {
 	width: 90%;
 	overflow: auto;
-	height: 125px;
+	height: auto;
 	line-height: 20px;
 	font-size: .9em;
-	margin: 20px auto;
+	margin: 5px auto;
 	padding-left: 5px;
 	padding-bottom: 10px;
 	padding-right: 5px;
 	background: ivory;
 	border-bottom: 1px solid white;
 	box-shadow: 2px 2px 3px rgba(0,0,0,.5) inset, -2px 2px 3px rgba(0,0,0,.5) inset;
+}
+
+#comment p {
+	line-height: 24px;
 }
 
 #instructionList {
@@ -110,8 +123,8 @@ button:disabled {
 /* QUESTION SECTION */
 #questionBorderDiv {
 	width: 90%;
-	background: linear-gradient(grey, lightgrey, lightgrey, white, lightgrey, lightgrey, grey);
-	margin: 25px auto;
+	background: -webkit-linear-gradient(grey, lightgrey, lightgrey, white, lightgrey, lightgrey, grey);background: linear-gradient(grey, lightgrey, lightgrey, white, lightgrey, lightgrey, grey);
+	margin: 5px auto;
 	padding: 2px;
 	border: 2px solid black;
 	box-shadow: 2px 0px 3px rgba(0,0,0,.3), 2px 2px 3px rgba(0,0,0,.3), -2px 0px 3px rgba(0,0,0,.3), -2px 2px 3px rgba(0,0,0,.3);
@@ -124,7 +137,7 @@ button:disabled {
 	font-family: "Courier New", Courier, monospace;
 	font-size: .9em;
 	letter-spacing: 1px;
-	height: 150px;
+	height: auto;
 	width: 95%;
 	color: deepskyblue;
 	margin: 2px auto;
@@ -152,16 +165,14 @@ button:disabled {
 	min-height: 100%;
 	width: 50px;
 	margin: 0 auto;
-	background: linear-gradient(to right, transparent, transparent, transparent, deepskyblue, transparent, transparent, transparent);
-	-webkit-animation: nightRider 2s linear infinite alternate;
-	animation: nightRider 2s linear infinite alternate;
+	background: -webkit-linear-gradient(left, transparent, transparent, transparent, deepskyblue, transparent, transparent, transparent);background: linear-gradient(to right, transparent, transparent, transparent, deepskyblue, transparent, transparent, transparent);
+	-webkit-animation: nightRider 2s linear infinite alternate;animation: nightRider 2s linear infinite alternate;
 }
 
-@-webkit-keyrames nightRider {
+@-webkit-keyframes nightRider {
 	from {left: -15px;}
 	to {left: 85%;}
 }
-
 @keyframes nightRider {
 	from {left: -15px;}
 	to {left: 85%;}
@@ -190,7 +201,7 @@ button:disabled {
 	height: 100%;
 	width: 50px;
 	margin-left: -25px;
-	background: linear-gradient(to right, transparent, transparent, transparent, transparent, rgba(255,0,0,0.5), red, rgba(255,0,0,0.5), transparent, transparent, transparent, transparent);
+	background: -webkit-linear-gradient(left, transparent, transparent, transparent, transparent, rgba(255,0,0,0.5), red, rgba(255,0,0,0.5), transparent, transparent, transparent, transparent);background: linear-gradient(to right, transparent, transparent, transparent, transparent, rgba(255,0,0,0.5), red, rgba(255,0,0,0.5), transparent, transparent, transparent, transparent);
 }
 
 #scale p {
@@ -206,18 +217,21 @@ button:disabled {
 #dontDoIt {
 	position: absolute;
 	text-align: center;
+	font-size: .8em;
 	padding-right: 0px;
 	padding-left: 0px;
 }
 
 #doIt {
-	top: -65px;
+	top: -10px;
 	left: 0px;
+	margin-left: -12px;
 }
 
 #dontDoIt {
-	top: -65px;
+	top: -10px;
 	right: 0px;
+	margin-right: -12px;
 }
 
 #doIt p,
@@ -240,6 +254,7 @@ button:disabled {
 
 footer {
 	text-align: center;
+	color: ivory;
 }
 
 #yinYang {
@@ -250,7 +265,7 @@ footer {
 /* MEDIA QUERRIES */
 @media screen and (min-width: 375px) {
 	#device {
-		background: linear-gradient(75deg, red, white, red, red, red, white, red, red, red, red, white);
+		background: -webkit-linear-gradient(15deg, red, white, red, red, red, white, red, red, red, red, white);background: linear-gradient(75deg, red, white, red, red, red, white, red, red, red, red, white);
 	}
 	
 	#doIt {
@@ -264,11 +279,11 @@ footer {
 
 @media screen and (min-width: 550px) {
 	#titleDiv {
-		background: linear-gradient(65deg, red, white, red, red, red, white, red);
+		background: -webkit-linear-gradient(25deg, red, white, red, red, red, white, red);background: linear-gradient(65deg, red, white, red, red, red, white, red);
 	}
 	
 	#device {
-		background: linear-gradient(65deg, red, white, red, red, red, white, red, red, red, white);
+		background: -webkit-linear-gradient(25deg, red, white, red, red, red, white, red, red, red, white);background: linear-gradient(65deg, red, white, red, red, red, white, red, red, red, white);
 	}
 	
 	#question {
@@ -314,7 +329,7 @@ footer {
 	#titleDiv {
 		margin-top: 25px;
 		margin-bottom: 25px;
-		background: linear-gradient(55deg, red, white, red, red, red, white, red);
+		background: -webkit-linear-gradient(35deg, red, white, red, red, red, white, red);background: linear-gradient(55deg, red, white, red, red, red, white, red);
 		border-radius: 100px 100px 0 0;
 	}
 	
@@ -328,7 +343,7 @@ footer {
 	}
 	
 	#device {
-		background: linear-gradient(55deg, red, white, red, red, red, white, red, red, red, white);
+		background: -webkit-linear-gradient(35deg, red, white, red, red, red, white, red, red, red, white);background: linear-gradient(55deg, red, white, red, red, red, white, red, red, red, white);
 	}
 
 	#question,
@@ -375,20 +390,20 @@ footer {
 
 @media screen and (min-width: 850px) {
 	#titleDiv {
-		background: linear-gradient(45deg, red, white, red, red, red, white, red);
+		background: -webkit-linear-gradient(45deg, red, white, red, red, red, white, red);background: linear-gradient(45deg, red, white, red, red, red, white, red);
 	}
 
 	#device {
-		background: linear-gradient(45deg, red, white, red, red, red, white, red, red, white);
+		background: -webkit-linear-gradient(45deg, red, white, red, red, red, white, red, red, white);background: linear-gradient(45deg, red, white, red, red, red, white, red, red, white);
 	}
 }
 
 @media screen and (min-width: 1000px) {
 	#titleDiv {
-		background: linear-gradient(45deg, red, white, red, red, red, white, red);
+		background: -webkit-linear-gradient(45deg, red, white, red, red, red, white, red);background: linear-gradient(45deg, red, white, red, red, red, white, red);
 	}
 
 	#device {
-		background: linear-gradient(45deg, red, white, red, red, red, red, red, white, red, red, red, red, white);
+		background: -webkit-linear-gradient(45deg, red, white, red, red, red, red, red, white, red, red, red, red, white);background: linear-gradient(45deg, red, white, red, red, red, red, red, white, red, red, red, red, white);
 	}
 }
