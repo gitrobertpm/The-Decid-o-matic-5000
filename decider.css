@@ -86,6 +86,10 @@ button:disabled {
 	margin: auto;
 }
 
+#beginButton {
+	margin: 5px auto;
+}
+
 /* COMMENT SECTION */
 #comment {
 	width: 90%;

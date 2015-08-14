@@ -31,7 +31,7 @@ opener();
 
 // INSTRUCTIONS
 var howToProceed = function() {
-	questionPrint("<p>Click the <b>\"Continue\"</b> button below to see the first of five questions that are designed to reveal if a thing should be done, or better left undone.</p>");
+	questionPrint("<p>Click the <b>\"Continue\"</b> button above to see the first of five questions that are designed to reveal if a thing should be done, or better left undone.</p>");
 	commentPrint("<h3>Instructions</h3><p>Is there something you you've been wanting to do?  Is there something you think you should or shouldn't do, but you're just not sure?  Is there something people have been telling you to do or don't do, and you don't know if you should listen to them?  Maybe I can help.</p><ul id=\"instructionList\"><li>1. Open your mind and clear it of all opinions.</li><li>2. Let go of all you think you know.</li><li>3. Carefully consider what you want to ask.</li><li>4. And when answering the questions below, try to be brutally honest.</li></ul><p id=\"goodLuck\">&#9786; Good Luck! &#9786;</p>");
 };
 
@@ -82,33 +82,33 @@ function begin() {
 // SET POSITION OF RED LINE ON SCALE
 function redLinePos(position) {
 	var redLine = document.getElementById("redLine");
-	redLine.style = position;
+	redLine.style.left = position;
 };
 
 // MATCHES SCORE AND RED LINE POSITION
 function redSlider() {
 	if (score > 9) {
-		redLinePos("left: 5%");
+		redLinePos("5%");
 	} else if (score === 8) {
-		redLinePos("left: 10%");
+		redLinePos("10%");
 	} else if (score === 6) {
-		redLinePos("left: 20%");
+		redLinePos("20%");
 	} else if (score === 4) {
-		redLinePos("left: 30%");
+		redLinePos("30%");
 	} else if (score === 2) {
-		redLinePos("left: 40%");
+		redLinePos("40%");
 	} else if (score === 0) {
-		redLinePos("left: 50%");
+		redLinePos("50%");
 	} else if (score === -2) {
-		dredLinePos("left: 60%");
+		dredLinePos("60%");
 	} else if (score === -4) {
-		redLinePos("left: 70%");
+		redLinePos("70%");
 	} else if (score === -6) {
-		redLinePos("left: 80%");
+		redLinePos("80%");
 	} else if (score === -8) {
-		redLinePos("left: 90%");
+		redLinePos("90%");
 	} else if (score < -9) {
-		redLinePos("left: 95%");
+		redLinePos("95%");
 	}
 };
 
