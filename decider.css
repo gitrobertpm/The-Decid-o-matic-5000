@@ -1,8 +1,8 @@
 /* DECIDER CSS */
 
 body {
-	font-family: Century Gothic, sans-serif;
-	font-size: 1em;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: .9em;
 	margin: 0;
 	background: rgb(25,25,25);
 }
@@ -36,13 +36,14 @@ body {
 }
 
 #title {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-family: 'Fascinate', cursive;
 	font-size: 1.25em;
 	color: white;
 	text-shadow: 2px 2px 1px black;
 }
 
 #titleDiv p {
+	font-family: 'Racing Sans One', cursive;
 	margin: -5px auto 5px;
 }
 
@@ -96,7 +97,7 @@ button:disabled {
 	overflow: auto;
 	height: auto;
 	line-height: 20px;
-	font-size: .9em;
+	font-size: 1.25em;
 	margin: 5px auto;
 	padding-left: 5px;
 	padding-bottom: 10px;
@@ -184,6 +185,7 @@ button:disabled {
 
 /* MEASURING DEVICE */
 #scale {
+	font-family: "Arial Black", Gadget, sans-serif;
 	position: relative;
 	color: dodgerblue;
 	height: 20px;

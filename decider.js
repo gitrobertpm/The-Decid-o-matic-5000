@@ -25,7 +25,7 @@ function questionPrint(questionMessage) {
 
 // OPENING COMMENT
 function opener() {
-	commentPrint("<h2>WELCOME</h2><p>If you're ready, click the <b>\"Initialize\"</b> button above to begin.</p>Or read the instructions first.<button onclick=\"instructions()\">Instruction</button><p>");
+	commentPrint("<h2>WELCOME</h2><p>If you're ready, click the <b>\"Initialize\"</b> button above to begin.</p>Or read the instructions first.<br><button onclick=\"instructions()\">Instruction</button><p>");
 };
 opener();
 
@@ -36,7 +36,7 @@ var howToProceed = function() {
 };
 
 function instructions() {
-	commentPrint("<h3>Instructions</h3><p>Is there something you you've been wanting to do?  Is there something you think you should or shouldn't do, but you're just not sure?  Is there something people have been telling you to do or don't do, and you don't know if you should listen to them?  Maybe I can help.</p><ul id=\"instructionList\"><li>1. Open your mind and clear it of all opinions.</li><li>2. Let go of all you think you know.</li><li>3. Carefully consider what you want to ask.</li><li>4. And when answering the questions below, try to be brutally honest.</li></ul><p id=\"goodLuck\">&#9786; Good Luck! &#9786;</p><p>Click the initialize or continue button to proceed.</p>");
+	commentPrint("<h3>Instructions</h3><p>Is there something you you've been wanting to do?  Is there something you think you should or shouldn't do, but you're just not sure?  Is there something people have been telling you to do or don't do, and you don't know if you should listen to them?  Maybe I can help.</p><ul id=\"instructionList\"><li>1. Open your mind and clear it of all opinions.</li><li>2. Let go of all you think you know.</li><li>3. Carefully consider what you want to ask.</li><li>4. And when answering the questions below, try to be brutally honest.</li></ul><p id=\"goodLuck\">&#9786; Good Luck! &#9786;</p><p>Click the initialize button above to proceed.</p>");
 };
 
 // SET BUTTON STATES
